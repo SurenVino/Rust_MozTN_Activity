@@ -1,1 +1,20 @@
-use std::io;
+use std::io::stdin();
+
+fn main() {
+println!("enter value of a");
+
+let mut a = string::new();
+io::stdin().read_line(&mut a);
+    .expect("Failed to read a");
+
+println!("enter the value of b");
+
+let mut b = string::new();
+io::stdin().read_line(&mut b);
+    .expect("Failed to read b");
+
+println!("sum is: {}", a+b);
+println!("difference is: {}", a-b);
+println!("mutlipy is: {}", a*b);
+println!("division is: {}", a/b);
+}
