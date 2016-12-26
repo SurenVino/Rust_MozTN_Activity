@@ -1,20 +1,29 @@
-use std::io::stdin();
+use std::io;
+use std::{i32};
 
 fn main() {
-println!("enter value of a");
 
-let mut a = string::new();
-io::stdin().read_line(&mut a);
-    .expect("Failed to read a");
+ println!("Enter First number ? ");
+    let mut input_1 = String::new();
+    io::stdin().read_line(&mut input_1)
+        .expect("Failed to read line");
+   
+    println!("Enter second number ? ");
+    let mut input_2 = String::new();
+    io::stdin().read_line(&mut input_2)
+        .expect("Failed to read line");
+   
+ let a_int: i32 = input_1.trim().parse()
+ .ok()
+ .expect("Please type a number!");
+ 
+ let b_int: i32 = input_2.trim().parse()
+ .ok()
+ .expect("Please type a number!");
+ 
+ println!("sum is: {}", a_int + b_int);
+ println!("difference is: {}", a_int - b_int);
+ println!("mutlipy is: {}", a_int * b_int);
+ println!("division is: {}", a_int / b_int);
 
-println!("enter the value of b");
-
-let mut b = string::new();
-io::stdin().read_line(&mut b);
-    .expect("Failed to read b");
-
-println!("sum is: {}", a+b);
-println!("difference is: {}", a-b);
-println!("mutlipy is: {}", a*b);
-println!("division is: {}", a/b);
 }
